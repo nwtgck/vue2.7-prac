@@ -32,14 +32,14 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script setup lang="ts">
+import { defineProps, ref } from 'vue';
 
-@Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
-  private myinput: string = "my default value";
-}
+const props = defineProps({
+  msg: String,
+});
+
+const myinput = ref("my default value");
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
